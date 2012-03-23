@@ -21,12 +21,12 @@ Add MySQL support to your application
 
     rhc app cartridge add -a etherpad -c mongodb-2.0
 
-Add this upstream Wordpress repo
+Add this upstream Etherpad repo
 
     cd etherpad
     git remote add upstream -m master git://github.com/wshearn/etherpad-example.git
     git pull -s recursive -X theirs upstream master
-    # note that the git pull above can be used later to pull updates to Wordpress
+    # note that the git pull above can be used later to pull updates to Etherpad
     
 Then push the repo upstream
 
