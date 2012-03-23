@@ -24,7 +24,7 @@ Add MySQL support to your application
 Add this upstream Wordpress repo
 
     cd etherpad
-    git remote add upstream -m master git://github.com/wshearn/openshift-etherpad.git
+    git remote add upstream -m master git://github.com/wshearn/etherpad-example.git
     git pull -s recursive -X theirs upstream master
     # note that the git pull above can be used later to pull updates to Wordpress
     
