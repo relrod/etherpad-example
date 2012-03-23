@@ -2,7 +2,7 @@ Etherpad on OpenShift Express
 ==============================
 
 This git repository helps you get up and running quickly w/ a Etherpad installation
-on OpenShift Express.  The backend database is MySQL and the database name is the 
+on OpenShift Express.  The backend database is MongoDB and the database name is the 
 same as your application name (using $_ENV['OPENSHIFT_APP_NAME']).  You can name
 your application whatever you want.  However, the name of the database will always
 match the application so you might have to update .openshift/action_hooks/build.
@@ -17,7 +17,7 @@ Create a nodejs-0.6 application (you can call your application whatever you want
 
     rhc app create -a etherpad -t nodejs-0.6
 
-Add MySQL support to your application
+Add MongoDB support to your application
 
     rhc app cartridge add -a etherpad -c mongodb-2.0
 
