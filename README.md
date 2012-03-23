@@ -44,3 +44,7 @@ GIT_ROOT/.openshift/action_hooks/deploy:
     to learn how to use it to your advantage.  By default, this script will create
     the database tables that this example uses.
 
+git push warnings:
+    You can safely ignore these. However if they really annoy you, you can edit
+    settings.json and replace the database settings with your own. Then edit 
+    .openshift/action_hooks/deploy and remove the sed statements.
