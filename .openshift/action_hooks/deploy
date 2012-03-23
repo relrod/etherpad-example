@@ -1,0 +1,16 @@
+#!/bin/bash
+# This deploy hook gets executed after dependencies are resolved and the
+# build hook has been run but before the application has been started back
+# up again.  This script gets executed directly, so it could be python, php,
+# ruby, etc.
+cp -v $OPENSHIFT_REPO_DIR/.openshift/mongodb_db.js $OPENSHIFT_GEAR_DIR/node_modules/ueberDB/
+
+settingsfile=$OPENSHIFT_REPO_DIR/settings.json
+
+sed -i 's/OPENSHIFT_INTERNAL_IP/'$OPENSHIFT_INTERNAL_IP'/' $settingsfile
+sed -i 's/OPENSHIFT_INTERNAL_PORT/'$OPENSHIFT_INTERNAL_PORT'/' $settingsfile
+sed -i 's/OPENSHIFT_NOSQL_DB_USERNAME/'$OPENSHIFT_NOSQL_DB_USERNAME'/' $settingsfile
+sed -i 's/OPENSHIFT_NOSQL_DB_HOST/'$OPENSHIFT_NOSQL_DB_HOST'/' $settingsfile
+sed -i 's/OPENSHIFT_NOSQL_DB_PORT/'$OPENSHIFT_NOSQL_DB_PORT'/' $settingsfile
+sed -i 's/OPENSHIFT_NOSQL_DB_PASSWORD/'$OPENSHIFT_NOSQL_DB_PASSWORD'/' $settingsfile
+sed -i 's/OPENSHIFT_APP_NAME/'$OPENSHIFT_APP_NAME'/' $settingsfile
