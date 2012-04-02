@@ -1,8 +1,8 @@
-Etherpad on OpenShift Express
-==============================
+Etherpad on OpenShift
+=====================
 
 This git repository helps you get up and running quickly w/ a Etherpad installation
-on OpenShift Express.  The backend database is MongoDB and the database name is the 
+on OpenShift.  The backend database is MongoDB and the database name is the 
 same as your application name (using $_ENV['OPENSHIFT_APP_NAME']).  You can name
 your application whatever you want.  However, the name of the database will always
 match the application so you might have to update .openshift/action_hooks/build.
